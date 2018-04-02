@@ -20,7 +20,7 @@ export function deferable(f: Function): Function {
           reject(err);
         });
       } else {
-        Promise.all(defers.map(deferHandler)).then(() => {
+        Promise.all(defers.reverse().map(deferHandler)).then(() => {
           resolve(res);
         }).catch((err) => {
           reject(err);
