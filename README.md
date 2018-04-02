@@ -1,4 +1,6 @@
 # js-defer
+[![Build Status](https://travis-ci.org/Sdju/js-defer.svg?branch=master)](https://travis-ci.org/Sdju/js-defer)
+
 A npm module with go-like defer implementation
 ## Installation 
 ```sh
