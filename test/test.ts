@@ -8,8 +8,9 @@ test('test defer', async ()=> {
 		defer(()=> {
 			val = arg;
 		} );
+		val = 'no-defer2';
 	};
 	const changer = deferable(someFunction);
 	await changer('defer!');
-	expect(val).toBe('defer');
+	expect(val).toBe('defer!');
 });
