@@ -34,7 +34,7 @@ const someFunction = deferable(async (defer, arg1, arg2) => {
 ### AMD
 ```javascript
 define(function(require,exports,module){
-  var deferable = require('js-ini').deferable;
+  var deferable = require('js-defer').deferable;
 });
 ```
 ## Test 
