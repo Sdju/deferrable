@@ -1,4 +1,4 @@
-export function deferable(f: Function): Function {
+function deferrablePromise(f: Function): Function {
   return (...args: any[]) => new Promise((resolve, reject) => {
     const defers: Function[] = [];
     const defer = (f: Function) => {
@@ -30,4 +30,24 @@ export function deferable(f: Function): Function {
       reject(err);
     }
   });
+}
+
+function deferrableSync(f: Function): Function {
+  return (...args: any[]) => {
+    const defers: Function[] = [];
+    const defer = (f: Function) => {
+      defers.push(f);
+    };
+    try {
+      const res: any = f(defer, ...args);
+      defers.reverse().forEach(deferred => deferred());
+      return res;
+    } catch (err) {
+      reject(err);
+    }
+  };
+}
+
+export default function deferrable(f: Function, isSync: boolean = false): Function {
+  return (isSync) ? deferrablePromise(f) : deferrableSync(f);
 }
