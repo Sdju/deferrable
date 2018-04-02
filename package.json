@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
