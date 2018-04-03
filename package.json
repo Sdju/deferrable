@@ -1,5 +1,5 @@
 {
-  "name": "deferrable",
+  "name": "js-deferrable",
   "version": "1.0.0",
   "description": "go-like defer implementation for javascript",
   "main": "lib/index.js",

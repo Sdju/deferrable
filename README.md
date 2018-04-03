@@ -4,14 +4,14 @@
 A npm module with go-like defer implementation
 ## Installation 
 ```sh
-npm install deferrable --save
-yarn add deferrable
-bower install deferrable --save
+npm install js-deferrable --save
+yarn add js-deferrable
+bower install js-deferrable --save
 ```
 ## Usage
 ### Javascript
 ```javascript
-const deferable = require('deferrable');
+const deferable = require('js-deferrable');
 const fs = require('fs');
 
 const someFunction = deferrable(async (defer, arg1, arg2) => {
@@ -30,7 +30,7 @@ const someSyncFunction = deferrable((defer, arg1, arg2) => {
 ```
 ### TypeScript
 ```typescript
-import deferrable from 'deferrable';
+import deferrable from 'js-deferrable';
 import * as fs from require('fs');
 
 const someFunction = deferrable(async (defer, arg1, arg2) => {
@@ -43,7 +43,7 @@ const someFunction = deferrable(async (defer, arg1, arg2) => {
 ### AMD
 ```javascript
 define(function(require,exports,module){
-  var deferrable = require('deferrable');
+  var deferrable = require('js-deferrable');
 });
 ```
 ## Test 
