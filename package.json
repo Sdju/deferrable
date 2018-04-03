@@ -1,7 +1,7 @@
 {
-  "name": "js-defer",
+  "name": "deferrable",
   "version": "1.0.0",
-  "description": "defer-like implementation for javascript",
+  "description": "go-like defer implementation for javascript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sdju/js-defer.git"
+    "url": "git+https://github.com/Sdju/deferrable.git"
   },
   "keywords": [
     "defer"
@@ -20,9 +20,9 @@
   "license": "MIT",
   "bugs": {
     "email": "zede@ventumit.ru",
-    "url": "https://github.com/Sdju/js-defer/issues"
+    "url": "https://github.com/Sdju/deferrable/issues"
   },
-  "homepage": "https://github.com/Sdju/js-defer#readme",
+  "homepage": "https://github.com/Sdju/deferrable#readme",
   "devDependencies": {
     "@types/jest": "^22.2.2",
     "jest": "^22.4.3",

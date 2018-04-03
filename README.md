@@ -1,27 +1,27 @@
-# js-defer
+# deferrable
 [![Build Status](https://travis-ci.org/Sdju/js-defer.svg?branch=master)](https://travis-ci.org/Sdju/js-defer)
 
 A npm module with go-like defer implementation
 ## Installation 
 ```sh
-npm install js-defer --save
-yarn add js-defer
-bower install js-defer --save
+npm install deferrable --save
+yarn add deferrable
+bower install deferrable --save
 ```
 ## Usage
 ### Javascript
 ```javascript
-const deferable = require('js-defer').deferable;
+const deferable = require('deferrable');
 const fs = require('fs');
 
-const someFunction = deferable(async (defer, arg1, arg2) => {
+const someFunction = deferrable(async (defer, arg1, arg2) => {
     const desc = await fs.open('someFile.txt');
     defer(()=>fs.close(desc));
     // ...
     // some actions with file, fs.close will be called automaticalle
 });
 
-const someSyncFunction = deferable((defer, arg1, arg2) => {
+const someSyncFunction = deferrable((defer, arg1, arg2) => {
         const desc = fs.openSync('someFile.txt');
         defer(()=>fs.closeSync(desc));
         // ...
@@ -30,10 +30,10 @@ const someSyncFunction = deferable((defer, arg1, arg2) => {
 ```
 ### TypeScript
 ```typescript
-import { deferable } from 'js-defer';
+import deferrable from 'deferrable';
 import * as fs from require('fs');
 
-const someFunction = deferable(async (defer, arg1, arg2) => {
+const someFunction = deferrable(async (defer, arg1, arg2) => {
     const desc: number = await fs.open('someFile.txt');
     defer(()=>fs.close(desc));
     // ...
@@ -43,7 +43,7 @@ const someFunction = deferable(async (defer, arg1, arg2) => {
 ### AMD
 ```javascript
 define(function(require,exports,module){
-  var deferable = require('js-defer').deferable;
+  var deferrable = require('deferrable');
 });
 ```
 ## Test 
