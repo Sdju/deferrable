@@ -20,6 +20,13 @@ const someFunction = deferable(async (defer, arg1, arg2) => {
     // ...
     // some actions with file, fs.close will be called automaticalle
 });
+
+const someSyncFunction = deferable((defer, arg1, arg2) => {
+        const desc = fs.openSync('someFile.txt');
+        defer(()=>fs.closeSync(desc));
+        // ...
+        // some actions with file, fs.closeSync will be called automaticalle
+}, true)
 ```
 ### TypeScript
 ```typescript
