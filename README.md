@@ -1,5 +1,5 @@
 # deferrable
-[![Build Status](https://travis-ci.org/Sdju/js-defer.svg?branch=master)](https://travis-ci.org/Sdju/js-defer)
+[![Build Status](https://travis-ci.org/Sdju/deferrable.svg?branch=master)](https://travis-ci.org/Sdju/deferrable)
 
 A npm module with go-like defer implementation
 ## Installation 
