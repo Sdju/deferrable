@@ -1,5 +1,7 @@
 # deferrable
 [![Build Status](https://travis-ci.org/Sdju/deferrable.svg?branch=master)](https://travis-ci.org/Sdju/deferrable)
+[![NPM version](https://img.shields.io/npm/v/deferrable.svg?style=flat-square)](https://www.npmjs.com/package/deferrable)
+[![Downloads](http://img.shields.io/npm/dm/deferrable.svg?style=flat-square)](https://npmjs.org/package/deferrable)
 
 A npm module with go-like defer implementation
 ## Installation 
